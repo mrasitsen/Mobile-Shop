@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decription" content="Web Shop example for Web Tech Course">
+    <meta name="author" content="Orhan Sait Berber | Muhammet Rasit Sen">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js" async></script>
+
+    <title>Amazing WebShop</title>
+</head>
+
+<body>
+
+    <!--nav section-->
+    <div class="nav">
+        <nav>
+            <a href="#firstsection">About Us</a> |
+            <a href="#secondsection">Lists</a> |
+            <a href="#thirdsection">Table-1</a> |
+            <a href="#fourthsection">Table-2</a>
+        </nav>
+    </div>
+
+    <!--First Section-->
+    <section class="preference" id="firstsection">
+        <h1>Welcome to Amazing Webshop</h1>
+        <h2><a href="API_reference_document.html">here to see the reference api</a></h2>
+        <div id="pharagraph">
+            <h2>Amazing Webshop is a place where you can buy amazing things</h2>
+            <p> <img src="https://tinyurl.com/a7tkkhzt" alt="tulip">
+                The space at the begining comes from 10% indent in css. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Curabitur lorem lorem, vehicula id blandit id, bibendum a
+                neque. Quisque placerat eros arcu, id ornare quam venenatis vitae. Sed quis neque dignissim, fringilla
+                leo in,
+                pulvinarneque.<a href="https://google.com">click this link for google</a> Aenean quis erat metus. Donec
+                vitae placerat mauris.
+                Proin interdum eget nulla quis efficitur. Proinnulla libero, suscipit at sapien sed, faucibus
+                ullamcorper mauris. Aenean eget scelerisque sem. Nulla et rhoncus metus.
+                Orcivarius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <pre>After this dummy text, here is an example of em; <em>dummy text</em>, after that we have strong; <strong>dummy text</strong>
+            last ve have pre; it is demonstrated as the this part and these are all the requirements we have in appendix 1.
+            This web page is being created by <abbr title="Orhan Sait">OS</abbr> and <abbr title="Muhammet Rasit">MR</abbr> for Web Tech Course.</pre>
+        </div>
+    </section>
+
+    <!--Second Section-->
+    <section id="secondsection">
+        <h2>Why You Should Choose Us</h2>
+        <div class="row">
+            <div class="card-body">
+                <h3 class="card-title">Our Services</h3>
+                <ul id="first-list">
+                    <li>Repairing Hardware</li>
+                    <li>Fixing Software Bugs</li>
+                    <li>Excellent Customer Service</li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Explanations</h3>
+                <dl id="second-list">
+                    <dt>iOS:</dt>
+                    <dd>Developed by Apple, an operating system</dd>
+                    <dt>Android:</dt>
+                    <dd>Developed by Google, an operating system</dd>
+                </dl>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Our Servcies</h3>
+                <ol id="third-list">
+                    <li>Repairing Hardware</li>
+                    <li>Fixing Software Bugs</li>
+                    <li>Excellent Customer Service</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <figure id="figcaption">
+        <img src="https://tinyurl.com/yckk2w7n" alt="Amsterdam" id="AmsterdamImage">
+        <figcaption>Amsterdam, 2022</figcaption>
+    </figure>
+
+
+    <!--Third Section-->
+    <section class="product-table" id="productTable">
+        <h2>Product Table</h2>
+        <table>
+            <caption>Best Selling Product</caption>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th id="default-sort">OS</th>
+                    <th>Screensize</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data from the database -->
+            </tbody>
+        </table>
+
+        <form id="productForm" action="" class="form-class">
+            <input type="url" id="image" name="image" placeholder="image URL" class="input-class" required>
+            <input type="text" id="brand" name="brand" placeholder="Brand" class="input-class" required>
+            <input type="text" id="model" name="model" placeholder="Model" class="input-class" required>
+            <input type="text" id="os" name="os" placeholder="OS" class="input-class" required>
+            <input type="text" id="screensize" name="screensize" placeholder="Screensize" class="input-class"
+                required><br>
+            <input type="submit" name="submit" value="Add Item" class="button-class" id="submitButton">
+            <input type="reset" id="reset" name="reset" value="Reset" class="button-class">
+            <!-- <input type="button" id="getElemets" name="getDB" value="getDB" class="button-class"> -->
+        </form>
+    </section>
+
+    <!--Fourth Section-->
+    <section class="product-table">
+        <h2>Price Table</h2>
+        <table>
+            <caption>Prices</caption>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>iPhone X</td>
+                    <td>$999.99</td>
+                    <td>1</td>
+                    <td>$999.99</td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy S10</td>
+                    <td>$999.99</td>
+                    <td>1</td>
+                    <td>$999.99</td>
+                </tr>
+                <tr>
+                    <td>Huawei P30 Pro</td>
+                    <td>$999.99</td>
+                    <td>1</td>
+                    <td>$999.99</td>
+                </tr>
+                <tr>
+                    <td>Huawei P30 Pro</td>
+                    <td>$999.99</td>
+                    <td>1</td>
+                    <td>$999.99</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form class="form-class">
+            <input type="checkbox" class="input-class" required>
+            <label>Conditions and Terms</label>
+            <input type="checkbox" class="input-class">
+            <label>Subscribe Newsletter</label>
+            <input type="submit" name="submit" value="Add To Basket" class="button-class">
+        </form>
+    </section>
+
+    <div id="contact-list">
+        <h3>Contact Us Asap</h3>
+        <ul>
+            <li>Phone</li>
+            <li>Mail</li>
+            <li>Address</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<!--
+    This website is full compatible with Google Chrome
+    Safari, Firefox, and Microsoft Edge mostly support operations.
+    For example; Operations especially in the print section are not supported by firefox.
+    Most of the operations are not supported by internet explorer 9 or below.
+-->

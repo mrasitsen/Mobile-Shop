@@ -1,0 +1,92 @@
+body {
+	margin: 0;
+	padding: 1rem;
+	
+	font-family: 'Proxima Nova';
+	font-size: 20px;
+	color: #533;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0;
+}
+
+ol, ul {
+	list-style: none;
+	padding: 0;
+}
+
+h2.resource-name {
+    border-bottom: 8px solid #533;
+}
+
+ol.resouce-list {
+    padding: 0 0 0 2rem;
+}
+		
+h3.name {
+border-bottom: 5px solid #533;
+}
+
+dt.urlParam-syntax {
+    border-left: 2px solid #533;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    
+    padding: 0.25em 1em;
+    background: rgba(85, 51, 51, 0.25);
+    
+    font-family: 'Courier New', monospace;
+}
+code.urlParam-name {
+    font-weight: bold;
+    margin: 0 1em 0 0;
+}
+
+span.urlParam-type {
+    font-style: italic;
+}
+
+span.urlParam-required {
+    font-style: italic;
+}
+p.urlParam-values {
+    font-family: 'Courier New', monospace;
+}
+
+li.sampleRequest {
+    white-space: pre;
+    font-family: 'Courier New', monospace;
+
+    background: rgba(81, 51, 51, 0.25);
+    padding: 0.1em 1em;
+    border-left: 2px solid rgba(81, 51, 51, 1);
+}
+
+
+li.sampleResponse {
+    white-space: pre;
+    font-family: 'Courier New', monospace;
+    
+    background: rgba(81, 51, 51, 0.25);
+    padding: 0.1em 1em;
+    border-left: 2px solid rgba(81, 51, 51, 1);
+}
+
+dl.errorCodes {
+margin: 0;
+padding: 0;
+}
+
+dt.errorCode-code {
+    border-left: 2px solid #533;
+    padding: 0.25em 1em;
+    background: rgba(85, 51, 51, 0.25);
+    font-family: 'Courier New', monospace;
+
+}
+
+dd.errorCode-meaning {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

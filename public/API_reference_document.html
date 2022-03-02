@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decription" content="API Reference for WebTech backend application">
+    <meta name="author" content="Orhan Sait Berber | Muhammet Rasit Sen">
+    <link rel="stylesheet" href="api_reference_style.css">
+
+    <title>API Reference</title>
+</head>
+
+<body>
+
+    <!--PRODUCT SECTION-->
+
+    <div class="resource">
+
+        <h2 class="resource-name">Product</h2>
+        <p class="resource-description">Provides CRUD operation on "/product" endpoint</p>
+
+        <ol class="resouce-list">
+
+            <li class="resource-item">
+                <h3 class="name">GET</h3>
+                <p class="info">Retrieve information about all products</p>
+
+                <h4 class="sampleRequests-header">Sample Endpoint</h4>
+
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">GET /product</li>
+                </ul>
+
+                <h4 class="responseValues-header">Response Information</h4>
+
+                <dl class="responseValues">
+                    <dt class="responseValue-syntax">
+                        <code class="responseValue-name">Product Informations</code>
+                        <span class="responseValue-type">(HTTP response 200)</span>
+                    </dt>
+                    <dd class="responseValue-def">
+                        <p class="responseValue-info">All the informations about products in JSON format</p>
+                    </dd>
+                </dl>
+
+                <h4 class="sampleResponses-header">Sample Response</h4>
+
+                <ul class="sampleResponses">
+                    <li class="sampleResponse">
+                        [
+                        {
+                        "id": 1,
+                        "image": "https://tinyurl.com/yc3fbz85",
+                        "brand": "Apple",
+                        "model": "iphone5",
+                        "os": "Android",
+                        "screensize": 5
+                        },
+                        {
+                        "id": 2,
+                        "image": "https://tinyurl.com/yc3fbz85",
+                        "brand": "Apple",
+                        "model": "iphone5",
+                        "os": "iOS",
+                        "screensize": 5
+                        }
+                        ]
+                    </li>
+                </ul>
+
+                <h4 class="errorCodes-header">Error codes</h4>
+
+                <dl class="errorCodes">
+                    <dt class="errorCode-code">500</dt>
+                    <dd class="errorCode-meaning">
+                        Internal Server Error
+                    </dd>
+                </dl>
+            </li>
+
+
+            <li class="resource-item">
+                <h3 class="name">GET</h3>
+                <p class="info">Retrieve information about a single products by id</p>
+
+                <h4 class="sampleRequests-header">Sample Endpoint</h4>
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">GET /product/:id</li>
+                </ul>
+
+                <h4 class="urlParams-header">URL parameters</h4>
+
+                <dl class="urlParams">
+                    <dt class="urlParam-syntax">
+                        <code class="urlParam-name">Product Id</code>
+                        <span class="urlParam-type">Integer</span>
+                    </dt>
+                    <dd class="urlParam-def">
+                        <p class="urlParam-info">
+                            <span class="urlParam-required">Required: </span>
+                            Id number of the product.
+                        </p>
+                        <p class="urlParam-values">
+                            Not null. Not negative.
+                        </p>
+                    </dd>
+                </dl>
+
+
+                <h4 class="responseValues-header">Response Information</h4>
+
+                <dl class="responseValues">
+                    <dt class="responseValue-syntax">
+                        <code class="responseValue-name">Product Informations</code>
+                        <span class="responseValue-type">(HTTP response 200)</span>
+                    </dt>
+                    <dd class="responseValue-def">
+                        <p class="responseValue-info">All the informations about the product with given ":id" in JSON
+                            format</p>
+                    </dd>
+                </dl>
+
+
+                <h4 class="sampleResponses-header">Sample Response</h4>
+
+                <ul class="sampleResponses">
+                    <li class="sampleResponse">
+                        {
+                        "image": "https://tinyurl.com/yc3fbz85",
+                        "brand": "Apple",
+                        "model": "iphone 5",
+                        "os": "iOS",
+                        "screensize": 8
+                        }
+                    </li>
+                </ul>
+
+                <h4 class="errorCodes-header">Error codes</h4>
+
+                <dl class="errorCodes">
+                    <dt class="errorCode-code">400</dt>
+                    <dd class="errorCode-meaning">
+                        Bad Request
+                    </dd>
+                    <dt class="errorCode-code">404</dt>
+                    <dd class="errorCode-meaning">
+                        Product with given ":id" not found
+                    </dd>
+                </dl>
+            </li>
+
+
+
+
+            <li class="resource-item">
+                <h3 class="name">POST</h3>
+                <p class="info">Creates a new product in database</p>
+
+                <h4 class="sampleRequests-header">Sample Endpoint</h4>
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">POST /product</li>
+                </ul>
+
+                <h4 class="requestBody-header">Body values</h4>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">image</code>
+                        <span class="requestBody-type">url</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">URL address of the product's picture.</p>
+                        <p class="requestBody-values">Not Null</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">brand</code>
+                        <span class="requestBody-type">string</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">Brand name of the product.</p>
+                        <p class="requestBody-values">Not Null</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">model</code>
+                        <span class="requestBody-type">string</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">Model name of the product.</p>
+                        <p class="requestBody-values">Not Null</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">os</code>
+                        <span class="requestBody-type">string</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">Name of operating system of the phone.</p>
+                        <p class="requestBody-values">Not Null</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">screensize</code>
+                        <span class="requestBody-type">number</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">screensize of the phone as integer</p>
+                        <p class="requestBody-values">Not Null / Positive Integer</p>
+                    </dd>
+                </dl>
+
+                <h4 class="responseValues-header">Response Information</h4>
+
+                <dl class="responseValues">
+                    <dt class="responseValue-syntax">
+                        <code class="responseValue-name">Product Id</code>
+                        <span class="responseValue-type">(HTTP response 201)</span>
+                    </dt>
+                    <dd class="responseValue-def">
+                        <p class="responseValue-info">JSON data tells that the data has been created with unique id
+                            number</p>
+                    </dd>
+                </dl>
+
+                <h4 class="sampleRequest-header">sample request</h4>
+
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">
+                        {
+                        "image": "https://tinyurl.com/yc3fbz85",
+                        "brand": "Xiaomi",
+                        "model": "iphone5",
+                        "os": "Android",
+                        "screensize": 5
+                        }
+                    </li>
+                </ul>
+
+                <h4 class="sampleResponses-header">Sample Response</h4>
+                <ul class="sampleResponses">
+                    <li class="sampleResponse">
+                        "The item has been created with the id of 3"
+                    </li>
+                </ul>
+
+                <h4 class="errorCodes-header">Error codes</h4>
+                <dl class="errorCodes">
+                    <dt class="errorCode-code">500</dt>
+                    <dd class="errorCode-meaning">
+                        Internal Server Error.
+                    </dd>
+                </dl>
+            </li>
+
+
+
+
+
+            <li class="resource-item">
+                <h3 class="name">PATCH</h3>
+                <p class="info">Updataes the partial or whole information of the item with given ":id"</p>
+
+                <h4 class="sampleRequests-header">Sample Endpoint</h4>
+
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">PATCH /product/:id</li>
+                </ul>
+
+                <h4 class="urlParams-header">URL parameters</h4>
+
+                <dl class="urlParams">
+                    <dt class="urlParam-syntax">
+                        <code class="urlParam-name">Product Id</code>
+                        <span class="urlParam-type">Integer</span>
+                    </dt>
+                    <dd class="urlParam-def">
+                        <p class="urlParam-info">
+                            <span class="urlParam-required">Required: </span>
+                            Id number of the product.
+                        </p>
+                        <p class="urlParam-values">
+                            Not null. Not negative.
+                        </p>
+                    </dd>
+                </dl>
+
+                <h4 class="requestBody-header">Body values</h4>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">image</code>
+                        <span class="requestBody-type">url</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">URL address of the product's picture.</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">brand</code>
+                        <span class="requestBody-type">string</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">Brand name of the product.</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">model</code>
+                        <span class="requestBody-type">string</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">Model name of the product.</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">os</code>
+                        <span class="requestBody-type">string</span>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">Name of operating system of the phone.</p>
+                    </dd>
+                </dl>
+
+                <dl class="requestBody">
+                    <dt class="requestBody-syntax">
+                        <code class="requestBody-name">screensize</code>
+                    </dt>
+                    <dd class="requestBody-def">
+                        <p class="requestBody-info">screensize of the phone as integer</p>
+                        <p class="requestBody-values">Positive Integer</p>
+                    </dd>
+                </dl>
+
+                <h4 class="responseValues-header">Response Information</h4>
+
+                <dl class="responseValues">
+                    <dt class="responseValue-syntax">
+                        <code class="responseValue-name">No Informations</code>
+                        <span class="responseValue-type">(HTTP response 204)</span>
+                    </dt>
+                    <dd class="responseValue-def">
+                        <p class="responseValue-info">All the informations about the product with given ":id" in JSON
+                            format</p>
+                    </dd>
+                </dl>
+
+                <h4 class="sampleRequest-header">sample request</h4>
+
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">
+                        {
+                        "image": "https://tinyurl.com/yc3fbz85",
+                        "brand": "Xiaomi",
+                        "model": "iphone5",
+                        "os": "Android",
+                        "screensize": 5
+                        }
+                    </li>
+                </ul>
+
+                <h4 class="sampleResponses-header">Sample Response</h4>
+                <ul class="sampleResponses">
+                    <li class="sampleResponse">
+                    </li>
+                </ul>
+
+                <h4 class="errorCodes-header">Error codes</h4>
+                <dl class="errorCodes">
+                    <dt class="errorCode-code">400</dt>
+                    <dd class="errorCode-meaning">
+                        Bad Request
+                    </dd>
+                    <dt class="errorCode-code">404</dt>
+                    <dd class="errorCode-meaning">
+                        Product with given ":id" not found
+                    </dd>
+                </dl>
+            </li>
+        </ol>
+    </div>
+
+
+
+
+    <!--DELETE SECTION-->
+
+    <div class="resource">
+
+        <h2 class="resource-name">Delete</h2>
+        <p class="resource-description">Provides CRUD operation on "/delete" endpoint</p>
+
+        <ol class="resouce-list">
+
+            <li class="resource-item">
+                <h3 class="name">DELETE</h3>
+                <p class="info">Deletes all the information about products exist in database.</p>
+
+                <h4 class="sampleRequests-header">Sample Endpoint</h4>
+
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">DELETE /delete</li>
+                </ul>
+
+                <h4 class="responseValues-header">Response Information</h4>
+
+                <dl class="responseValues">
+                    <dt class="responseValue-syntax">
+                        <code class="responseValue-name">No Informations</code>
+                        <span class="responseValue-type">(HTTP response 204)</span>
+                    </dt>
+                    <dd class="responseValue-def">
+                        <p class="responseValue-info">All the information of the products have been deleted</p>
+                    </dd>
+                </dl>
+
+                <h4 class="sampleResponses-header">Sample Response</h4>
+
+                <ul class="sampleResponses">
+                    <li class="sampleResponse">
+                    </li>
+                </ul>
+
+                <h4 class="errorCodes-header">Error codes</h4>
+
+                <dl class="errorCodes">
+                    <dt class="errorCode-code">500</dt>
+                    <dd class="errorCode-meaning">
+                        Internal Server Error.
+                    </dd>
+                </dl>
+            </li>
+
+
+
+
+
+            <li class="resource-item">
+                <h3 class="name">DELETE</h3>
+                <p class="info">Deletes all the information of the item with given ":id"</p>
+
+                <h4 class="sampleRequests-header">Sample Endpoint</h4>
+
+                <ul class="sampleRequests">
+                    <li class="sampleRequest">DELETE /delete/:id</li>
+                </ul>
+
+                <h4 class="urlParams-header">URL parameters</h4>
+
+                <dl class="urlParams">
+                    <dt class="urlParam-syntax">
+                        <code class="urlParam-name">Product Id</code>
+                        <span class="urlParam-type">Integer</span>
+                    </dt>
+                    <dd class="urlParam-def">
+                        <p class="urlParam-info">
+                            <span class="urlParam-required">Required: </span>
+                            Id number of the product.
+                        </p>
+                        <p class="urlParam-values">
+                            Not null. Not negative.
+                        </p>
+                    </dd>
+                </dl>
+
+                <h4 class="responseValues-header">Response Information</h4>
+
+                <dl class="responseValues">
+                    <dt class="responseValue-syntax">
+                        <code class="responseValue-name">No Informations</code>
+                        <span class="responseValue-type">(HTTP response 204)</span>
+                    </dt>
+                    <dd class="responseValue-def">
+                        <p class="responseValue-info">Product information with given ":id" has been deleted.</p>
+                    </dd>
+                </dl>
+
+                <h4 class="sampleResponses-header">Sample Response</h4>
+
+                <ul class="sampleResponses">
+                    <li class="sampleResponse">
+                    </li>
+                </ul>
+
+                <h4 class="errorCodes-header">Error codes</h4>
+                <dl class="errorCodes">
+                    <dt class="errorCode-code">400</dt>
+                    <dd class="errorCode-meaning">
+                        Bad Request
+                    </dd>
+                    <dt class="errorCode-code">404</dt>
+                    <dd class="errorCode-meaning">
+                        Product with given ":id" not found
+                    </dd>
+                </dl>
+            </li>
+        </ol>
+    </div>
+
+</body>
+
+</html>

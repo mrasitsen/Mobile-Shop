@@ -1,0 +1,343 @@
+
+/* General Css Begin */
+
+
+body{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;       
+    background-image: url(https://d2oto6eso8zumr.cloudfront.net/images/ot/its-amazing.1200x480.jpg?e=Lanczos3&q=75&crop=no&rotation=0&origin=cc);         /* Orhan ekleme */
+    background-repeat: no-repeat;         
+    background-position: center;         
+    background-size: cover;         
+}
+
+h1{
+    color: rgb(216, 95, 210);
+    font-size: 50px; 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    color: rgb(233, 20, 55);
+    font-size: 2em;
+    font-style: italic;        
+    text-align: center;
+}
+
+img{
+    width: 5em;
+    height: 5em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+a:visited{
+    color: rgb(233, 20, 55);
+}
+
+a:active{
+    background-color: greenyellow;
+}
+
+input:focus {
+    background-color: rgb(182, 182, 172);
+}
+
+/* General Css End */
+
+/* Nav Section Start */
+
+.nav{
+    background: rgb(83, 168, 238);       
+    text-align: center;
+    padding: 1em;   
+    margin-top: 1em;
+    margin-bottom: 1em; 
+    border-radius: 25px;
+    border-color: rgb(238, 127, 83);   
+    border-style: solid;       
+    border-spacing: 100px;    
+    border-width: thick;      
+    
+}
+
+/* Nav Section End */
+
+/* Pharagraph Section Start */
+
+h1:hover{
+    font-style: italic; 
+    text-decoration: underline;
+}
+
+#pharagraph{
+    background-color: #d0d8e2;
+    text-align: center;
+    text-indent: 10%;  
+    padding: 20px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 25px;
+}
+
+#pharagraph img{
+    height: 10em;
+    width: 10em;
+    float:left;
+}
+
+/* Pharagraph Section End */
+ 
+/* List Section Start */
+
+#secondsection h2{
+    color: rgb(12, 34, 233);
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+#secondsection h3{
+    color: red;
+    font-size: 30px;
+}
+
+.row{
+    display: flex;
+    background-color: aqua;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.card-body{
+    background-color: #d0d8e2;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin: 1.5em 1.5em 1.5em 1.5em;
+}
+
+#first-list{
+    list-style-image: linear-gradient(0.50turn, #3f87a6, #f69d3c);;
+    
+}
+
+#second-list dt{
+    color: rgb(12, 34, 233);
+    font-weight: bold;
+    float:left;
+}
+
+#second-list dd{
+    text-align: left;
+    margin: 0 0 0 6em;
+    padding: 0 0 0.5em 0;
+}
+
+#third-list{
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+/* List Section End */
+
+/* Image Section Start */
+
+#AmsterdamImage{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#figcaption{
+    text-align: center;
+    text-decoration: line-through;
+}
+
+/* Image Section End */
+
+/* Product Table Start */
+
+.product-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    text-align: center;
+    box-sizing: border-box;
+    font: 1em Arial, sans-serif;
+}
+
+.product-table table{
+    caption-side: bottom;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
+}
+
+.product-table caption{
+    
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+    padding: 1em;
+}
+.product-table thead tr{
+    background-color: #670369 ;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.product-table th,
+.product-table td,
+.product-table tr{
+    position: relative;
+    padding: 0.5em 0.7em;
+}
+
+.product-table .os{
+    font-weight: bold;
+}
+
+.product-table .brand{
+    font-style: italic;
+}
+
+.product-table th{
+    text-transform: uppercase;
+}
+
+.product-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.product-table tbody tr:nth-of-type(even) {
+    background-color: #a9d4fa;
+}
+
+.product-table tbody tr:nth-of-type(odd) {
+    background-color: #f9f9fa
+}
+
+.product-table tbody tr:last-of-type {
+    border-bottom: 0.1em solid #009879;
+}
+
+.product-table tbody tr:hover {
+    font-weight: bold;
+    color: #009879;
+}
+
+.form-class{
+    background-color: #009879;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+    border-radius: 25px;
+    margin: 1em 1em 1em 1em;
+}
+
+.input-class{
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin: 1em 1em 1em 1em;
+    border-spacing: 5px;
+}
+
+.button-class{
+    background-color: #d0d8e2;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    margin: 1em 1em 1em 1em;
+}
+
+/* Product Table End */
+
+/* Product Table End */
+
+#contact-list{   
+    text-align: center;
+    width: 20%;
+    background-color: #f69d3c;
+    border-radius: 25%;
+    padding: 10px;
+    margin: auto;
+    list-style: disc outside;
+}
+/* Product Table End */
+
+/* Media Section Start */
+
+@media screen and (max-width: 600px) {
+
+  .product-table caption {
+    font-size: 1em;
+  }
+
+ 
+  .product-table thead {
+    display: none;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: center;
+  }
+
+  .form-class{
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 1em 1em 1em;
+    padding: 1em;
+  }
+
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+@media print{
+    #secondsection, #figcaption {
+        page-break-before: always;
+    }
+
+    .product-table{
+        page-break-inside: avoid;
+        page-break-after: always;
+    }
+
+    p {
+    orphans: 3;
+    widows: 3;
+    }
+
+}
+
+/* Media Section End */
